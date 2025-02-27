@@ -1,24 +1,21 @@
 syms lambda11 lambda12 mu11 mu12 M1 M2 eps positive
 
-a11 = -2*lambda11*M1 - eps*(lambda12*M2-(lambda12*M2)/3);
-a12 = 2*(mu11 + (eps*lambda12*M1)/3);
-a13 = -(2*eps*lambda12*M1)/(9*(2+mu12));
-a14 = -(4*eps*lambda12)/(9*(2+mu12));
-
+a11 = -2/3*(3*lambda11*M1 + eps*lambda12*M2);
+a12 = 2*(mu11+ (eps*lambda12*M1)/3);
+a13 = -(2*eps*lambda12*M1)/(9*(1+mu12));
+a14 = -(4*eps*lambda12)/(9*(1+mu12));
 a21 = (lambda12*M2)/3 + (lambda11*M1)/eps; 
-a22 = -mu11/eps - lambda12*M1 + (2*lambda12*M1)/3;
-a23 = -1/(2*eps) - (2*lambda12*M1)/(9*(2+mu12));
-a24 = -4*lambda12/(9*(2+mu12));
-
-a31 = 2*lambda11*M1/eps;
+a22 = -mu11/eps-lambda12*M1/3;
+a23 = -1/(2*eps)-(2*lambda12*M1)/(9*(1+mu12));
+a24 = -4*lambda12/(9*(1+mu12));
+a31 = 2* lambda11*M1/eps;
 a32 = 0;
-a33 = -(1/eps)*(2 + mu11 + ((2*eps*lambda12*M1)*(3+mu12))/(3*(2+mu12)));
-a34 = (2*lambda12*mu12)/(3*(2+mu12));
-
-a41 = (2 * lambda12 * M1 * M2) / (9 * (1 + mu12)) + 2/eps * lambda11 * M1^2; 
+a33 = -(1/eps)*(2+mu11+((2*eps*lambda12*M1)*(3+mu12))/(3*(1+mu12)));
+a34 = (2*lambda12*mu12)/(3*(1+mu12));
+a41 = (2  * lambda12 * M1 * M2) / (9 * (1/2 + mu12)) + 2/eps * lambda11 * M1^2; 
 a42 = 0;
-a43 = -(lambda12 * M1^2) / (9 * (2 + mu12)) - 2/eps * M1;
-a44 = -((lambda12 * M1 * (10 + 3*mu12)) / (9 * (2 + mu12)) + mu11/eps);
+a43 = -( lambda12 * M1^2) / (9 * (1 + mu12)) - 2/eps * M1;
+a44 = -( ( lambda12 * M1 * (10 + 3 * mu12)) / (9 * (1 + mu12)) + mu11/eps );
 
 A4 = 1;
 A3 = - (a11 + a22 + a33 + a44); 
